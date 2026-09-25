@@ -7,7 +7,7 @@ clubs: Cycle, Cycle Xpress, BodyPump, BodyPump Xpress, BodyBalance and every yog
 
 ## How it works
 
-Every 6 hours a GitHub Actions workflow downloads the schedule data behind
+Once a day (early morning Pacific time) a GitHub Actions workflow downloads the schedule data behind
 [LVAC's class search](https://www.lvac.com/locations/search-class-schedules), rebuilds
 `docs/lvac-classes.ics` and publishes it with GitHub Pages.
 
