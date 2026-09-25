@@ -25,7 +25,8 @@ class BuildFeedTest(unittest.TestCase):
                             cls('BODYPUMP™', pacific_ts(2026, 9, 25, 7), 2),
                             cls('BODYPUMP HEAVY™', pacific_ts(2026, 9, 25, 8), 3),
                             cls('YIN YOGA', pacific_ts(2026, 9, 25, 9), 4),
-                            cls('CYCLE PWR BY LVAC', pacific_ts(2026, 9, 25, 10), 5)],
+                            cls('CYCLE PWR BY LVAC', pacific_ts(2026, 9, 25, 10), 5),
+                            cls('POWER YOGA', pacific_ts(2026, 9, 25, 11), 7)],
                      'sw': [cls('ZUMBA', pacific_ts(2026, 9, 25, 6), 6)]}
         feed = lc.build_feed(schedules, None, NOW)
         summaries = [l for l in feed.splitlines() if l.startswith('SUMMARY:')]

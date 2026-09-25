@@ -1,7 +1,7 @@
 """Build an iCalendar feed of selected LVAC classes.
 
 Downloads the class schedules that power https://www.lvac.com/locations/search-class-schedules,
-keeps only the classes in CLASS_NAMES (plus any yoga class), and writes an .ics file with
+keeps only the classes in CLASS_NAMES, and writes an .ics file with
 times pinned to Pacific time. Classes that already happened are carried over from the
 previous feed for KEEP_PAST_DAYS so they don't vanish from the calendar.
 
@@ -20,7 +20,12 @@ from pathlib import Path
 
 DATA_URL = 'https://www.lvac.com/wp-content/plugins/lvac-short-codes/uploads/{}.classes.json'
 LOCATIONS = {'nw': 'Northwest', 'sw': 'Southwest'}
-CLASS_NAMES = {'CYCLE', 'CYCLE XPRESS', 'BODYPUMP', 'BODYPUMP XPRESS', 'BODYBALANCE'}
+CLASS_NAMES = {
+    'CYCLE', 'CYCLE XPRESS', 'BODYPUMP', 'BODYPUMP XPRESS', 'BODYBALANCE',
+    # Every yoga class in LVAC's class list (full.options.json)
+    'BEGINNING YOGA', 'GENTLE YOGA', 'GENTLE YOGA MIX', 'YIN YOGA', 'YOGA', 'YOGA BLEND',
+    'YOGA VINYASSA FLOW', 'YOGA-ALL LEVELS',
+}
 KEEP_PAST_DAYS = 30
 TZID = 'America/Los_Angeles'
 TZ = zoneinfo.ZoneInfo(TZID)
@@ -37,7 +42,7 @@ VTIMEZONE = [
 
 def wanted(cname):
     name = cname.upper().replace('™', '').strip()
-    return name in CLASS_NAMES or 'YOGA' in name
+    return name in CLASS_NAMES
 
 
 def fetch(location, attempts=4):
