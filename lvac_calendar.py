@@ -19,7 +19,7 @@ import zoneinfo
 from pathlib import Path
 
 DATA_URL = 'https://www.lvac.com/wp-content/plugins/lvac-short-codes/uploads/{}.classes.json'
-LOCATIONS = {'nw': 'Northwest', 'sw': 'Southwest'}
+LOCATIONS = {'n': 'North', 'nw': 'Northwest', 'sw': 'Southwest'}
 CLASS_NAMES = {
     'CYCLE', 'CYCLE XPRESS', 'BODYPUMP', 'BODYPUMP XPRESS', 'BODYBALANCE',
     # Every yoga class in LVAC's class list (full.options.json)

@@ -1,8 +1,8 @@
 # LVAC Calendar
 
-A subscribable calendar of Las Vegas Athletic Club classes at the **Northwest** and **Southwest**
-clubs: Cycle, Cycle Xpress, BodyPump, BodyPump Xpress, BodyBalance and LVAC's yoga classes
-(Beginning, Gentle, Gentle Mix, Yin, Yoga, Blend, Vinyassa Flow and All Levels).
+A subscribable calendar of Las Vegas Athletic Club classes at the **North**, **Northwest** and
+**Southwest** clubs: Cycle, Cycle Xpress, BodyPump, BodyPump Xpress, BodyBalance and LVAC's yoga
+classes (Beginning, Gentle, Gentle Mix, Yin, Yoga, Blend, Vinyassa Flow and All Levels).
 
 **Feed URL:** https://kjivan.github.io/lvac-calendar/lvac-classes.ics
 
